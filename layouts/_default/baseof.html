@@ -13,7 +13,7 @@
     {{ template "_internal/opengraph.html" . }}
 
     {{ if .Permalink }}
-      <base href=""> 
+      <base href="{{ .Site.BaseURL }}">
     {{ end }}
     <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
 
