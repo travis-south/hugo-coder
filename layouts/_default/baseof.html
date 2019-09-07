@@ -13,12 +13,12 @@
     {{ template "_internal/opengraph.html" . }}
 
     {{ if .Permalink }}
-      <base href="{{ .Permalink }}">
+      <base href="{{ .Site.BaseURL }}">
     {{ end }}
     <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
 
     {{ if .Permalink }}
-      <link rel="canonical" href="{{ .Permalink }}">
+      <link rel="canonical" href="{{ .Site.BaseURL }}">
     {{ end }}
 
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700" rel="stylesheet">
