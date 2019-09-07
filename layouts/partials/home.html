@@ -10,13 +10,21 @@
       {{ range sort .}}
         {{ if .icon }}
           <li>
+<<<<<<< HEAD
             <a {{ printf "href=%q" .url | safeHTMLAttr }} aria-label="{{ .name }}">
+=======
+            <a href="{{ .url }}" aria-label="{{ .name }}" {{ if .rel }}rel="{{ .rel }}"{{ end }}>
+>>>>>>> 2fa8ce9cdb053afdab85f0e7b854405482c7d0c9
               <i class="{{ .icon }}" aria-hidden="true"></i>
             </a>
           </li>
         {{ else }}
           <li>
+<<<<<<< HEAD
             <a {{ printf "href=%q" .URL | safeHTMLAttr }} aria-label="{{ .name }}">{{ .name }}</a>
+=======
+            <a href="{{ .url }}" aria-label="{{ .name }}" {{ if .rel }}rel="{{ .rel }}"{{ end }}>{{ .name }}</a>
+>>>>>>> 2fa8ce9cdb053afdab85f0e7b854405482c7d0c9
           </li>
         {{ end }}
       {{ end }}
